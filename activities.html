@@ -74,7 +74,33 @@
         </div>
 
         <!-- 階層構造のサイドメニュー -->
-        <div id="aside-container"></div>
+        <aside class="side-menu" id="sideMenu">
+            <h3>Quick Access</h3>
+            <a href="index.html">Home</a>
+            <ul>
+                <li>
+                    <a class="toggle"></a><a href="activities.html">Activities</a>
+                    <ul>
+                        <li><a href="#project1">Project 1</a></li>
+                        <li><a href="#project2">Project 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="toggle"></a><a href="log.html">Log</a>
+                    <ul>
+                        <li><a href="log/webassembly.html">WebAssembly</a></li>
+                        <li><a href="#log2">Log 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div style="position: absolute; bottom: 20px; left: 20px;">
+                <a href="https://github.com/your-repo-link" target="_blank" title="View on GitHub">
+                    <img src="images/github-mark/github-mark.png" alt="GitHub" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+            
+        </aside>
     </main>
     <footer>
         <p>&copy; 2025 Yuta Muraya</p>
