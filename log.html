@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="個人ブログ">
+    <title>Log</title>
+    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="css/right-side.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><a href="index.html">DevMemo by YM</a></h1>
+        </div>
+        
+        <div class="header-right">
+            <button id="sidebarToggle" class="toggle-button">☰</button>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-inner">
+            <h1>Log</h1>
+            <div class="contents">
+                <div class="content">
+
+                    <div class="main-content">
+
+                        <h2 class="title"><a href="log/webassembly.html">WebAssembly</a></h2>
+                        <div class="tag">
+                            <a>WebAssembly</a>
+                            <a>JavaScript</a>
+                        </div>
+
+                        <div class="explain jp">
+                            JavaScriptと連携して動作する低水準のバイナリ実行形式<br>
+                            EmscriptenでC/C++やGo、Rustなどをコンパイルして生成されるJavaScriptとWasmで動作する
+                        </div>
+                        <div class="explain en">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 階層構造のサイドメニュー -->
+        <aside class="side-menu" id="sideMenu">
+            <h3>Quick Access</h3>
+            <a href="index.html">Home</a>
+            <ul>
+                <li>
+                    <a class="toggle"></a><a href="activities.html">Activities</a>
+                    <ul>
+                        <li><a href="#project1">Project 1</a></li>
+                        <li><a href="#project2">Project 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="toggle"></a><a href="log.html">Log</a>
+                    <ul>
+                        <li><a href="log/webassembly.html">WebAssembly</a></li>
+                        <li><a href="#log2">Log 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div style="position: absolute; bottom: 20px; left: 20px;">
+                <a href="https://github.com/your-repo-link" target="_blank" title="View on GitHub">
+                    <img src="images/github-mark/github-mark.png" alt="GitHub" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+            
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Yuta Muraya</p>
+    </footer>
+</body>
+</html>

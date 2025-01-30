@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="個人ブログ">
+    <title>WebAssembly</title>
+    <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/right-side.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><a href="index.html">DevMemo by YM</a></h1>
+        </div>
+        
+        <div class="header-right">
+            <button id="sidebarToggle" class="toggle-button">☰</button>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-inner">
+            <h1>WebAssembly</h1>
+            <div class="contents">
+                <div class="content">
+
+                    <div class="main-content">
+
+                        <h2 class="title">About WebAssembly</h2>
+
+                        <div class="explain jp">
+                            実行環境とは独立して動作する<br>
+                            ブラウザなどに組み込まれているWebAssembly Runtime上で実行される<br>
+                            W3Cで標準化されている<br>
+                            コンパイラ：Emscripten<br>
+                            拡張子：.wasm
+                        </div>
+                        <div class="explain en">
+                            Runs independently of the execution environment<br>
+                            Runs on WebAssembly Runtime embedded in browsers, etc.<br>
+                            Standardized by W3C<br>
+                            Compiler: Emscripten<br>
+                            Extension: .wasm
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="content">
+                    <div class="main-content">
+                        <h2 class="title">Emscripten</h2>
+                        <div class="explain jp">
+                            WebAssembly用のコンパイラ<br>
+                            C/C++ Go Rust Zigなどに対応している<br>
+                        </div>
+
+                        <h3>Install Emscripten</h3>
+                        <div>
+                            <code class="bash">
+                                git clone https://github.com/emscripten-core/emsdk.git<br>
+                                cd emsdk<br>
+                                ./emsdk install latest<br>
+                                ./emsdk activate latest<br>
+                                source ./emsdk_env.sh<br>
+                                emcc -v
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="main-content">
+                        <h2 class="title">Compile</h2>
+                        <p>CC = emcc</p>
+                        <h2>Typical flags</h2>
+                        <div class="explain">
+                            -o output files<br>
+                            -I Import flag<br>
+                            -O Optimization flag<br>
+                            -- shell 出力ファイルのテンプレートを指定<br>
+                            -s Option Setting flag<br>
+                            -s WASM=1 WebAssembly出力を有効化（デフォで有効）<br>
+                            -s ENVIRONMENT=web Web環境専用にコンパイル、他にworkerやnodeがある<br>
+                            -s EXPORTED_RUNTIME_FUNCTIONS="['main']" 外部から呼び出す関数を指定（デフォでmainは呼び出せる）<br>
+                            -s EXPORTED_RUNTIME_METHODS="['callMain']" 外部から使用するランタイムメソッドを指定<br>
+                            -s ALLOW_MEMORY_GROWTH=1 メモリの動的な割り当てを有効化（デフォは16MBに固定）<br>
+                            --preload-file assets コンパイル時に事前に読み込むファイルを指定しておく<br>
+                            --embed-file 実行時に必要に応じて読み込むファイルを指定しておく
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="ref">
+                        <h2 class="title">References</h2>
+                            <div>
+                                <a href="https://emscripten.org/index.html#">emscripten</a><br>
+                                <a href="https://developer.mozilla.org/ja/docs/WebAssembly">WebAssembly / mozilla</a><br>
+                                <a href="https://developer.mozilla.org/ja/docs/WebAssembly/C_to_Wasm">C to Wasm / mozilla</a><br>
+                                <a href="https://www.w3.org/TR/wasm-core-1/">WebAssembly Core Specification / W3C</a>
+                                <a href="https://qiita.com/sachaos/items/e3a613b018febb898fde">WebAssembly の過去・現在・未来 / Qiita</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- 階層構造のサイドメニュー -->
+        <aside class="side-menu" id="sideMenu">
+            <h3>Quick Access</h3>
+            <a href="../index.html">Home</a>
+            <ul>
+                <li>
+                    <a class="toggle"></a><a href="../activities.html">Activities</a>
+                    <ul>
+                        <li><a href="#project1">Project 1</a></li>
+                        <li><a href="#project2">Project 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="toggle"></a><a href="../log.html">Log</a>
+                    <ul>
+                        <li><a href="log/webassembly.html">WebAssembly</a></li>
+                        <li><a href="#log2">Log 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div style="position: absolute; bottom: 20px; left: 20px;">
+                <a href="https://github.com/your-repo-link" target="_blank" title="View on GitHub">
+                    <img src="../images/github-mark/github-mark.png" alt="GitHub" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+            
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Yuta Muraya</p>
+    </footer>
+</body>
+</html>
