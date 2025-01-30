@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="個人ブログ">
-    <title>Activities</title>
-    <link rel="stylesheet" href="css/activities.css">
-    <link rel="stylesheet" href="css/right-side.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <title>LRS by JavaScript</title>
+    <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/right-side.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <header>
         <div class="header-left">
-            <h1><a href="index.html">DevMemo by YM</a></h1>
+            <h1><a href="../index.html">DevMemo by YM</a></h1>
         </div>
         
         <div class="header-right">
@@ -30,27 +30,25 @@
 
                     <div class="main-content">
 
-                        <h2 class="title"><a href="./activities/lrs-by-js.html">LRS by JavaScript</a></h2>
+                        <h2 class="title"><a href="https://ym28-it.github.io/lrs-web-app/">LRS by JavaScript</a></h2>
                         <div class="log">
                             <div>Log:</div>
-                            <a href="log/webassembly.html">WebAssembly</a>
+                            <a href="../log/webassembly.html">WebAssembly</a>
                             <a>C</a>
                             <a>JavaScript</a>
                         </div>
 
                         <div class="explain jp">
-                            オリジナルのCプログラムをEmscriptenでコンパイルして作りました<br>
-                            システムはHTML・CSS・JavaScript・Wasmで実装されているため、処理はユーザのデバイス内で完結します<br>
-                            LRSはポリトープの頂点計算や凸包計算を行うアルゴリズム<br>
-                            現在はlrs mp, lrs long, lrs hybridの三種類が使用可能<br>
-                            lrs longは64bit 128bitとそれぞれオーバーフローのチェックを行うモードと行わないモードがあります
+                            開発したWebアプリケーション<br>
+                            逆探索を用いた列挙問題のソルバー<br>
+                            ポリトープのH表現とV表現の変換などを行う<br>
+                            現在はシングルスレッドのlrsmpとlrslongが使用可能
                         </div>
                         <div class="explain en">
-                            The original C program was compiled and created in Emscripten <br>
-                            The system is implemented in HTML, CSS, JavaScript, and Wasm, so processing is completed within the user's device <br>
-                            LRS is an algorithm that performs polytope vertex and convex hull calculations <br>
-                            Currently three types are available: lrs mp, lrs long, and lrs hybrid <br>
-                            lrs long is available in 64-bit and 128-bit modes with and without overflow checking, respectively
+                            Web application I developed<br>
+                            Solver for enumeration problems using inverse search<br>
+                            Conversion between H- and V-representation of polytope, etc.<br>
+                            Currently single-threaded lrsmp and lrslong available
                         </div>
                     </div>
 
